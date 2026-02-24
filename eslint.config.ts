@@ -8,13 +8,7 @@ import tseslint from "typescript-eslint";
 export default defineConfig(
   {
     files: ["**/*.ts"],
-    extends: [
-      eslint.configs.recommended,
-      tseslint.configs.strictTypeChecked,
-      jsdoc.configs["flat/recommended-typescript"]
-    ]
-  },
-  {
+    extends: [eslint.configs.recommended, tseslint.configs.strictTypeChecked],
     languageOptions: {
       parserOptions: {
         projectService: true,

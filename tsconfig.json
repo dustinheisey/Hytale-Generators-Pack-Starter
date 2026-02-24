@@ -1,20 +1,29 @@
 {
   "compilerOptions": {
-    "module": "nodenext",
+    "erasableSyntaxOnly": true,
+    "noEmit": true,
+
+    "outDir": "./dist",
     "target": "esnext",
+    "rootDir": ".",
+
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
     "lib": ["esnext"],
     "types": ["node"],
+
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": false,
-    "isolatedModules": true,
-    "resolveJsonModule": true,
-    "outDir": "./dist",
-    "erasableSyntaxOnly": true,
-    "noEmit": true,
-    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+
     "verbatimModuleSyntax": true
   },
+  "include": ["*.config.ts", "src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

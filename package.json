@@ -1,6 +1,6 @@
 {
-  "name": "hytale-generators-starter",
-  "version": "0.1.0",
+  "name": "hytale-generators-pack-starter",
+  "version": "0.2.0",
   "license": "MIT",
   "private": "true",
   "author": "Dustin Heisey",
@@ -8,26 +8,21 @@
   "scripts": {
     "format": "prettier . --write",
     "lint:types": "tsc --noEmit",
-    "lint:scripts": "eslint . -c eslint.config.ts --fix",
-    "lint:cspell": "cspell lint .",
-    "lint": "run-s --continue-on-error lint:types lint:scripts lint:cspell",
-    "build": "node src/index.ts"
+    "lint:scripts": "eslint --flag unstable_native_nodejs_ts_config . --fix",
+    "lint": "npm run lint:types && npm run lint:scripts",
+    "dev": "node --watch ./index.ts",
+    "build": "node ./index.ts"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.2",
-    "@types/node": "^25.2.1",
-    "commitlint": "^20.4.1",
-    "cspell": "^9.6.4",
-    "eslint": "^9.39.2",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.3.0",
+    "eslint": "^10.0.2",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-jsdoc": "62.5.2",
-    "husky": "^9.1.7",
-    "hytale-generators": "^0.1.2",
-    "lint-staged": "^16.2.7",
-    "npm-run-all": "^4.1.5",
+    "hytale-generators": "^0.2.5",
     "prettier": "3.8.1",
     "prettier-plugin-organize-imports": "^4.3.0",
+    "type-fest": "^5.4.4",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.54.0"
+    "typescript-eslint": "^8.56.1"
   }
 }
