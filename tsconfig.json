@@ -16,6 +16,7 @@
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": true,
     "skipLibCheck": true,
 
     "declaration": true,
@@ -24,6 +25,6 @@
 
     "verbatimModuleSyntax": true
   },
-  "include": ["*.config.ts", "src/**/*.ts"],
+  "include": ["*.config.ts", "**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

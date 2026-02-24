@@ -9,5 +9,5 @@ categories({ children: [{ id: "Example", icon: "Ingots" }] });
 
 example({
   id: "Example",
-  color: "#0829af",
+  color: "#0829af"
 });
